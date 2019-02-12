@@ -1,0 +1,41 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "prettier"
+  ],
+  "rules": {
+    "curly": 0, // This rule is aimed at preventing bugs and increasing code clarity by ensuring that block statements are wrapped in curly braces.
+    "new-parens": 1, // This rule requires parentheses when invoking a constructor with no arguments using the new keyword in order to increase code clarity.
+    "no-cond-assign": 2, // This rule disallows ambiguous assignment operators in test conditions of if, for, while, and do...while statements.
+    "no-debugger": 1,
+    "no-empty": 1, // fixed some of them by comment do nothing  // This rule disallows empty block statements.
+    "no-multi-spaces": [1, {"exceptions": { "Property": true, "VariableDeclarator": true, "ImportDeclaration": true }}], // This rule aims to disallow multiple whitespace around logical expressions, conditional expressions, declarations, array elements, object properties, sequences and function parameters.
+    "no-return-assign": 1, // This rule aims to eliminate assignments from return statements.
+    "no-shadow": 0, // This rule aims to eliminate shadowed variable declarations.
+    "no-undef": 2,
+    "no-useless-escape": 0,
+    "no-unreachable": "warn",
+    "no-this-before-super": "warn",
+    "no-const-assign": "warn",
+    "constructor-super": "warn",
+    "valid-typeof": "warn",
+    "semi": 2,
+    "max-len": [2, 120, 2],
+    "keyword-spacing": 1,
+    "no-extra-boolean-cast": 1,
+    "eqeqeq": 0, // too many
+    "no-console": [1, {"allow": ["warn", "error"]}],
+    "no-unused-vars": [1, {"ignoreRestSiblings": true, "args": "none"}],
+    "no-case-declarations": 0, // Should fix
+    "no-redeclare": 0, // Happens on React Component
+    "prefer-const": 0, // too many
+    "space-before-blocks": 2
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "mocha": true,
+    "es6": true
+  }
+}

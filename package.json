@@ -1,0 +1,28 @@
+{
+  "name": "postcss-class-rename",
+  "version": "1.0.0",
+  "description": "PostCSS plugin simply rename class without hassle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LBrian/postcss-class-rename.git"
+  },
+  "keywords": [
+    "postcss",
+    "postcss-plugins",
+    "css",
+    "rename"
+  ],
+  "author": "Yuehpeng Liu <brian.liu@stackla.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LBrian/postcss-class-rename/issues"
+  },
+  "homepage": "https://github.com/LBrian/postcss-class-rename#readme",
+  "devDependencies": {
+    "postcss": "7.0.14"
+  }
+}
