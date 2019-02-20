@@ -13,6 +13,10 @@
   "keywords": [
     "postcss",
     "postcss-plugins",
+    "postcss-plugin",
+    "webpack",
+    "webpack-loader",
+    "rollup",
     "css",
     "rename"
   ],
