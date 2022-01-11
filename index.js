@@ -1,32 +1,35 @@
-const postcss = require("postcss");
+const replaceClass = (root, pattern, replacement) => {
+  if (typeof pattern !== "string") {
+    return;
+  }
 
-module.exports = postcss.plugin("postcss-class-rename", options => {
-  const isObject = typeof options === "object" && options instanceof Object;
+  root.walk(rule => {
+    const regex = new RegExp(pattern, "gi");
+
+    if (rule.type === "rule") {
+      rule.selector = rule.selector.replace(regex, replacement);
+    } else if (rule.type === "atrule") {
+      rule.params = rule.params.replace(regex, replacement);
+    }
+  })
+}
+
+module.exports = (opts = {}) => {
+  const isObject = typeof opts === "object" && opts instanceof Object;
 
   if (!isObject) {
     return;
   }
 
-  return root => {
-    const replaceClass = (pattern, replacement) => {
-      if (typeof pattern !== "string") {
-        return;
+  return {
+    postcssPlugin: 'postcss-class-rename',
+    Once (root, { result }) {
+      // Replace all defined pattern and replacement
+      for (let p of Object.keys(opts)) {
+        replaceClass(root, p, opts[p]);
       }
+    },
+  }
+}
 
-      root.walk(rule => {
-        const regex = new RegExp(pattern, "gi");
-
-        if (rule.type === "rule") {
-          rule.selector = rule.selector.replace(regex, replacement);
-        } else if (rule.type === "atrule") {
-          rule.params = rule.params.replace(regex, replacement);
-        }
-      });
-    };
-
-    // Replace all defined pattern and replacement
-    Object.keys(options).forEach(function(p) {
-      replaceClass(p, options[p]);
-    });
-  };
-});
+module.exports.postcss = true
