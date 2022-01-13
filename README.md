@@ -1,10 +1,6 @@
-# postcss-class-rename
+# postcss-class-rename-postcss8
 
-[PostCSS][PostCSS] plugin to replace class name by giving key-value mapping in options.
-
-forked
-
----
+[PostCSS][PostCSS] plugin to replace class name by giving key-value mapping in options
 
 ## Installation
 
