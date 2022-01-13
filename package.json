@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LBrian/postcss-class-rename.git"
+    "url": "git+https://github.com/nshusr/postcss-class-rename.git"
   },
   "keywords": [
     "postcss",
@@ -20,12 +20,12 @@
     "css",
     "rename"
   ],
-  "author": "Yuehpeng Liu <brian.liu@stackla.com>",
+  "author": "Yuehpeng Liu <brian.liu@stackla.com>,Rea <hi@rea.ink>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LBrian/postcss-class-rename/issues"
+    "url": "https://github.com/nshusr/postcss-class-rename/issues"
   },
-  "homepage": "https://github.com/LBrian/postcss-class-rename#readme",
+  "homepage": "https://github.com/nshusr/postcss-class-rename#readme",
   "devDependencies": {
     "postcss": "^8.4.5"
   },
